@@ -24,3 +24,13 @@ ExportedObj/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+
+# ============== #
+# Wwise generated #
+# ============== #
+[Ww]wise/.cache/
+*.wsettings
+*.validationcache
+*.cache
+*.akd
+*.prof
