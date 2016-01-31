@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}" SchemaVersion="70">
+	<Busses>
+		<WorkUnit Name="Default Work Unit" ID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ChildrenList>
+						<Bus Name="HDR Master" ID="{7D5A7D51-AF80-4ACE-AB67-6AC84CB6E718}">
+							<PropertyList>
+								<Property Name="HdrEnable" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Music" ID="{9FDDFC16-7CE9-4A18-9649-898032AC66DD}"/>
+								<Bus Name="Ambience" ID="{6442CD24-5246-495F-83C7-57177369B666}"/>
+								<Bus Name="SFX" ID="{181B6F19-C099-4F56-9C73-1F93BE12CFA7}">
+									<ChildrenList>
+										<Bus Name="Player" ID="{75B01A93-E2A2-451B-8D30-8DD95446EB7B}"/>
+										<Bus Name="Footsteps" ID="{F58100C2-F52C-417C-899D-26700A07F779}">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-19</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+										</Bus>
+										<Bus Name="Events" ID="{F5F2DD69-6127-4E9C-B165-045D57BE90F3}"/>
+										<Bus Name="Dagger" ID="{1338784B-97D0-4C85-8F39-589CF6E09CB8}"/>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+					</ChildrenList>
+				</Bus>
+				<Bus Name="Master Secondary Bus" ID="{D2E0BC7E-7B3F-4FFE-A670-FAE02761B631}"/>
+				<MotionBus Name="Master Motion Bus" ID="{20A630BA-3398-4676-B927-1004DFE41FD8}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Busses>
+</WwiseDocument>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4E22F637-C3DF-4309-BFFF-79E2C8070A40}" SchemaVersion="70">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{4E22F637-C3DF-4309-BFFF-79E2C8070A40}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="MAIN" ID="{E7BF134D-2863-4426-AE1A-7A59E41E755F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Dagger_Hit" ID="{64808905-73B0-40E7-9427-912B30B780A2}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_PlayIntro" ID="{8DE79924-A67E-4ECF-892C-071EDC81CC90}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Player" ID="{7B0B8133-E1E0-466D-B46C-5544F6A0B807}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Combat" ID="{DDB0FE33-E546-44EB-A9C8-E07534DC70FB}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Slidedown_Gravel_Start" ID="{1B00AF34-2E30-45F7-948C-CFA1C3B665B2}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Fire_Start" ID="{A8C05257-0F97-443C-A1CB-5F8532757948}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Slidedown_Blood_Stop" ID="{26EE145A-E7A6-4CE2-A7FB-9C02CF32DF26}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Slidedown_Gravel_Stop" ID="{BC2E6F5E-67D5-4FDF-982C-383031411F68}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music" ID="{FD39325F-0469-4245-B45F-ABF8294C6A04}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Environment Events" ID="{F77BAB62-AF11-4B6C-92FF-E9B455BF29C4}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Plant_Rip" ID="{CBB8CC6B-3258-4D43-AC2E-E8AC3FF11CEF}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_PlayBuild" ID="{D45F648C-4E2F-41DC-B451-0EABC6FF489A}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Slidedown_Blood_Start" ID="{ACD38F8E-F7BD-4BC3-ABC0-CE03C2602553}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Music_Stop" ID="{38BF36A4-5D0E-4E2A-B255-28A0CF37EF8B}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Slidedowns" ID="{24BE92D9-1E1F-4030-83FD-84BA3751F4E8}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Dagger_Attack" ID="{F261FCFF-61EE-434E-A11B-55346A1F2ED7}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

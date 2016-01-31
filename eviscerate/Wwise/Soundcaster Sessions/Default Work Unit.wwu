@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7BB5B647-0EDD-43C4-969B-4784207C18A4}" SchemaVersion="70">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{7BB5B647-0EDD-43C4-969B-4784207C18A4}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{0C682EC9-29EA-4FB2-9E64-ABEB2C93C606}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Plant_Rip" ID="{CBB8CC6B-3258-4D43-AC2E-E8AC3FF11CEF}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dagger_Attack" ID="{F261FCFF-61EE-434E-A11B-55346A1F2ED7}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Footsteps_Start" ID="{604A7B89-FCC0-4257-9555-C15FB6493AB1}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_PlayIntro" ID="{8DE79924-A67E-4ECF-892C-071EDC81CC90}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Ambience" ID="{6442CD24-5246-495F-83C7-57177369B666}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Fire_Start" ID="{A8C05257-0F97-443C-A1CB-5F8532757948}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dagger_Hit" ID="{64808905-73B0-40E7-9427-912B30B780A2}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Footsteps_Stop" ID="{09239846-9BA0-4EAC-B1EF-339810397B24}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_PlayBuild" ID="{D45F648C-4E2F-41DC-B451-0EABC6FF489A}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music" ID="{9FDDFC16-7CE9-4A18-9649-898032AC66DD}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slidedown_Blood_Start" ID="{ACD38F8E-F7BD-4BC3-ABC0-CE03C2602553}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Music_Stop" ID="{38BF36A4-5D0E-4E2A-B255-28A0CF37EF8B}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slidedown_Blood_Stop" ID="{26EE145A-E7A6-4CE2-A7FB-9C02CF32DF26}" WorkUnitID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Dagger" ID="{1338784B-97D0-4C85-8F39-589CF6E09CB8}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Footsteps" ID="{F58100C2-F52C-417C-899D-26700A07F779}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Events" ID="{F5F2DD69-6127-4E9C-B165-045D57BE90F3}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player" ID="{75B01A93-E2A2-451B-8D30-8DD95446EB7B}" WorkUnitID="{4C73710B-33ED-4B01-8083-F10D9583A7C4}"/>
+							<Position X="4" Y="5"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Build_05" ID="{6B730C1C-7AA9-4D75-8DD7-38744EFEB2BA}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Gravel" ID="{55BFDFE8-67F2-4F48-AE4C-FE899A275078}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

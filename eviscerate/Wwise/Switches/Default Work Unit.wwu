@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C13A3615-4FA8-4EA4-8677-E8768CED297D}" SchemaVersion="70">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{C13A3615-4FA8-4EA4-8677-E8768CED297D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="GroundType" ID="{4135B1C6-981D-461B-89D7-5A6D1E7856FD}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{BC3AF228-1596-4DCA-A4B6-371851C5ACB2}"/>
+						<Switch Name="Water" ID="{11A72671-66C6-4215-B5BE-5E577A84A1F1}"/>
+						<Switch Name="Deep_Water" ID="{598F51CC-8DC6-44FE-8D30-5A12A325B883}"/>
+						<Switch Name="Mud" ID="{0CF150B9-10BB-4E34-86F7-E05F5A0E1A70}"/>
+						<Switch Name="Stone" ID="{F95EB82C-4C40-4564-ABC1-4A65023F47AD}"/>
+						<Switch Name="Gravel" ID="{55BFDFE8-67F2-4F48-AE4C-FE899A275078}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

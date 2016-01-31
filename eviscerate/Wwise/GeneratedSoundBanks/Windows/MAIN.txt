@@ -1,0 +1,84 @@
+Event	ID	Name			Wwise Object Path	Notes
+	643486511	Footsteps_Start			\Default Work Unit\Player\Footsteps_Start	
+	734008916	Slidedown_Blood_Stop			\Default Work Unit\Environment Events\Slidedowns\Slidedown_Blood_Stop	
+	894013704	Slidedown_Blood_Start			\Default Work Unit\Environment Events\Slidedowns\Slidedown_Blood_Start	
+	1712046992	Fire_Start			\Default Work Unit\Environment Events\Fire_Start	
+	1843177945	Slidedown_Gravel_Stop			\Default Work Unit\Environment Events\Slidedowns\Slidedown_Gravel_Stop	
+	2139053889	Music_PlayBuild			\Default Work Unit\Music\Music_PlayBuild	
+	2263603568	Plant_Rip			\Default Work Unit\Environment Events\Plant_Rip	
+	3227181061	Music_Stop			\Default Work Unit\Music\Music_Stop	
+	3247576578	Dagger_Attack			\Default Work Unit\Combat\Dagger_Attack	
+	3312934011	Slidedown_Gravel_Start			\Default Work Unit\Environment Events\Slidedowns\Slidedown_Gravel_Start	
+	3843002761	Dagger_Hit			\Default Work Unit\Combat\Dagger_Hit	
+	4053997147	Music_PlayIntro			\Default Work Unit\Music\Music_PlayIntro	
+	4187365685	Footsteps_Stop			\Default Work Unit\Player\Footsteps_Stop	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2835351336	GroundType			\Default Work Unit\GroundType	
+
+Switch	ID	Name	Switch Group			Notes
+	712897245	Mud	GroundType			
+	1216965916	Stone	GroundType			
+	2185786256	Gravel	GroundType			
+	2187154135	Deep_Water	GroundType			
+	2195636714	Dirt	GroundType			
+	2654748154	Water	GroundType			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	4406611	rip_plant_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\rip_plant_02_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\plantRip\rip_plant_02		854768
+	26647293	FS_Gravel_R2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_R2_404BBDCE.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_R\FS_Gravel_R2		77328
+	55061894	tamtam_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\tamtam_02_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Transitions\tamtamT_light\tamtam_02		780404
+	69375323	intro_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\intro_02_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_05_backtoIntro\intro_02\intro_02		7596288
+	85376030	fireIgnite	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\ignite_fire_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Fire\fireIgnite		336596
+	86709244	FS_Stone_R3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_R3_25FC5C14.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_R\FS_Stone_R3		52088
+	117224947	dagger_stab_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Dagger\dagger_stab_02_20738036.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dagger\daggerStab\dagger_stab_02		46664
+	119617613	dagger_stab_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Dagger\dagger_stab_01_20738036.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dagger\daggerStab\dagger_stab_01		76668
+	146199511	FS_Mud_L2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_L2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_L\FS_Mud_L2		78792
+	182131324	FS_Stone_L3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_L3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_L\FS_Stone_L3		52332
+	203788980	slidedown_gravel_loop	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\slidedown_gravel_loop_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Slidedown Gravel\slidedown_gravel_loop\slidedown_gravel_loop		530816
+	213841807	FS_Gravel_R1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_R1_1F793738.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_R\FS_Gravel_R1		77444
+	229060998	FS_Gravel_L1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_L1_38148AEF.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_L\FS_Gravel_L1		77672
+	236713607	gong_low_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\gong_low_01_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Transitions\tamtamT_heavy\gong_low_01		1042548
+	246109637	FS_DeepWater_03	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_DeepWater_03_B149EB51.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_DeepWater\FS_DeepWater_03		102844
+	247446834	build_05_end	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\build_05_end_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_05_backtoIntro\build_05_end\build_05_end		3664036
+	273705268	slidedown_gravel_end	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\slidedown_gravel_end_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Slidedown Gravel\slidedown_gravel_end		351332
+	279693990	FS_DeepWater_04	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_DeepWater_04_7F95042A.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_DeepWater\FS_DeepWater_04		105708
+	303032102	build_03	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\build_03_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_03\build_03\build_03		6809764
+	338208100	FS_Water_03	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Water_03_D0905E51.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Water\FS_Water_03		87672
+	342171676	FS_Mud_L1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_L1_E5DA76D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_L\FS_Mud_L1		78592
+	385725531	FS_Stone_L2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_L2_D4689E74.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_L\FS_Stone_L2		52380
+	413547222	FS_Dirt_R1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_R1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_R\FS_Dirt_R1		48804
+	439753744	slidedown_blood	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\slidedown_blood_0743D997.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Slidedown Blood\slidedownBloodAndGravel\slidedown_blood_loop\slidedown_blood		323148
+	441837345	FS_Mud_L3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_L3_5F73BC3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_L\FS_Mud_L3		78520
+	465196325	FS_Stone_L1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_L1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_L\FS_Stone_L1		52332
+	525443534	intro_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\intro_01_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_05_backtoIntro\intro_01\intro_01		7072004
+	539708011	fireLoop	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\fire_loop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Fire\fireLoop		2658044
+	557985901	intro_buildonly	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\intro_buildonly_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Intro\intro_FirstPlay\intro_buildonly\intro_buildonly		2877648
+	574047594	dagger_woosh_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Dagger\dagger_woosh_01_08514E98.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dagger\dagger_woosh_01		23660
+	584401563	FS_Gravel_R3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_R3_F79D18FC.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_R\FS_Gravel_R3		77188
+	600989073	FS_Dirt_R2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_R2_5043D145.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_R\FS_Dirt_R2		50504
+	608674816	FS_Dirt_R3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_R3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_R\FS_Dirt_R3		50568
+	624607748	FS_Water_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Water_02_61C913DD.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Water\FS_Water_02		87216
+	630328537	FS_Water_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Water_01_7BD5B6B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Water\FS_Water_01		87324
+	681906917	FS_Stone_R2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_R2_F1C82235.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_R\FS_Stone_R2		52328
+	694401300	build_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\build_01_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_01\build_01\build_01		3401940
+	709974589	build_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\build_02_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_02\build_02\build_02		7071908
+	721195721	FS_Mud_R2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_R2_34B86542.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_R\FS_Mud_R2		78428
+	726604133	FS_Dirt_L3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_L3_215797A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_L\FS_Dirt_L3		50548
+	731578001	FS_Dirt_L1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_L1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_L\FS_Dirt_L1		50568
+	738053964	FS_Water_04	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Water_04_9E621E58.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Water\FS_Water_04		88584
+	781589102	FS_DeepWater_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_DeepWater_01_07BCEA3F.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_DeepWater\FS_DeepWater_01		104092
+	798760820	cymbal_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\cymbal_01_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Transitions\tamtamT_light\cymbal_01		780404
+	806788357	FS_Gravel_L3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_L3_4CC9C00B.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_L\FS_Gravel_L3		77456
+	854846120	slidedown_gravel_start	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\slidedown_gravel_start_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\Slidedown Gravel\slidedown_gravel_start		174728
+	894551532	FS_Stone_R1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Stone_R1_F8787B19.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Stone\FS_Stone_R\FS_Stone_R1		52184
+	921922579	FS_Dirt_L2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Dirt_L2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Dirt\FS_Dirt_L\FS_Dirt_L2		50568
+	942148246	dagger_stab_03	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Dagger\dagger_stab_03_20738036.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dagger\daggerStab\dagger_stab_03		87252
+	977222503	FS_Mud_R1	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_R1_2C02CCC7.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_R\FS_Mud_R1		78976
+	997123116	FS_Mud_R3	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Mud_R3_7EE6251D.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Mud\FS_Mud_R\FS_Mud_R3		78228
+	1009420364	rip_plant_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Events\rip_plant_01_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Events\plantRip\rip_plant_01		960152
+	1049586360	FS_DeepWater_02	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_DeepWater_02_AFFE0C69.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_DeepWater\FS_DeepWater_02		103836
+	1058539900	FS_Gravel_L2	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\Footsteps\FS_Gravel_L2_9ABB282E.wem		\Actor-Mixer Hierarchy\Default Work Unit\FootstepsSwitch\FS_Gravel\FS_Gravel_L\FS_Gravel_L2		77476
+	1068970196	tamtam_01	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\tamtam_01_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Transitions\tamtamT_heavy\tamtam_01		780452
+	1069262557	build_04	Y:\Repositories\eviscerate\eviscerate\Wwise\.cache\Windows\SFX\build_04_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\musicSystem\Build\build_04\build_04\build_04		6547620
+
