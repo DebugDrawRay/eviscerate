@@ -9,5 +9,14 @@ public class Status : MonoBehaviour
     {
         Debug.Log("Ouch");
         health += healthChange;
+        if(health <= 0)
+        {
+            deathEvent();
+        }
+    }
+
+    void deathEvent()
+    {
+        Destroy(gameObject);
     }
 }

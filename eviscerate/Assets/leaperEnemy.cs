@@ -2,7 +2,7 @@
 using System.Collections;
 using DG.Tweening;
 
-public class leaperEnemy : MonoBehaviour
+public class leaperEnemy : Enemy
 {
     public float sightDistance;
 
@@ -31,14 +31,15 @@ public class leaperEnemy : MonoBehaviour
         idle,
         pursuing,
         circling,
-        leaping
+        leaping,
+        knockback
     }
     private state currentState;
+    private state previousState;
+
     private PlayerCharacter player;
 
     private float currentTimer;
-
-    private Rigidbody rigid;
 
     private Vector3 currentDirection;
 
@@ -52,6 +53,8 @@ public class leaperEnemy : MonoBehaviour
 
         currentRecoveryTimer = leapRecoveryTimer;
         currentReadyTimer = leapReadyTimer;
+
+        damage = passiveDamage;
     }
 
     void Update()
@@ -64,17 +67,19 @@ public class leaperEnemy : MonoBehaviour
         switch(currentState)
         {
             case state.idle:
-                if(triggerDistance(sightDistance))
+                if (triggerDistance(sightDistance))
                 {
                     currentState = state.pursuing;
                 }
                 break;
             case state.pursuing:
                 pursue();
-                if(triggerDistance(minCirclingDistance))
+                currentTimer = Random.Range(minTimeToLeap, maxTimeToLeap);
+                if (triggerDistance(minCirclingDistance))
                 {
                     currentState = state.circling;
                 }
+
                 break;
             case state.circling:
                 circling();
@@ -92,6 +97,20 @@ public class leaperEnemy : MonoBehaviour
             case state.leaping:
                 leaping();
                 break;
+            case state.knockback:
+                knockback();
+                if(!inKnockback)
+                {
+                    currentState = state.idle;
+                }
+                break;
+        }
+
+        if(inKnockback)
+        {
+            currentTween.Complete();
+            currentTween = null;
+            currentState = state.knockback;
         }
     }
 
@@ -101,7 +120,8 @@ public class leaperEnemy : MonoBehaviour
         currentDirection = Vector3.Lerp(currentDirection, direction, trackingLazyness);
         currentDirection.y = 0;
         rigid.velocity = currentDirection.normalized * movementSpeed;
-        
+        damage = passiveDamage;
+
     }
 
     void circling()
@@ -111,15 +131,17 @@ public class leaperEnemy : MonoBehaviour
         currentDirection = Vector3.Lerp(currentDirection, direction, trackingLazyness);
         currentDirection.y = 0;
         rigid.velocity = currentDirection.normalized * movementSpeed;
+        damage = passiveDamage;
     }
 
     void leaping()
     {
-        rigid.velocity = Vector3.zero;
         shake(currentReadyTimer);
         currentReadyTimer -= Time.deltaTime;
         if(currentReadyTimer <= 0)
         {
+            damage = leapDamage;
+            currentTween = null;
             Vector3 direction = player.transform.position - transform.position;
             rigid.AddForce(direction.normalized * leapForce);
             currentRecoveryTimer -= Time.deltaTime;
@@ -149,7 +171,7 @@ public class leaperEnemy : MonoBehaviour
     {
         if(currentTween == null || !currentTween.IsPlaying())
         {
-            currentTween = transform.DOShakePosition(length, new Vector3(1,0,1), 2, 90);
+            currentTween = transform.DOShakePosition(length, new Vector3(.1f,0,.1f), 90, 90);
         }
     }
 }

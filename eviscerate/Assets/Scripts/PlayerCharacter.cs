@@ -12,7 +12,8 @@ public class PlayerCharacter : MonoBehaviour
         move,
         attack,
         death,
-        stabbed
+        stabbed,
+        knockback
     }
 
     public state currentState;
@@ -38,11 +39,18 @@ public class PlayerCharacter : MonoBehaviour
     public float maxAttackChargeForce;
     public float maxAttackCharge;
 
+    public GameObject maxChargeEffect;
+
+    public GameObject dashEffect;
+    private GameObject currentDashEffect;
+
     private bool canCharge;
 
     private float currentAttackCharge;
     private float currentAttackPersistence;
     private GameObject currentWeapon;
+
+    private Vector3 attackDir;
 
     [Header("Status")]
     public float health;
@@ -56,6 +64,12 @@ public class PlayerCharacter : MonoBehaviour
     private int currentTargetIndex = 0;
     private bool followingTarget;
     private GameObject[] targets;
+
+    [Header("Knockback")]
+    public float knockbackForce;
+    public float knockbackLength;
+    private float currentKnockback;
+    private bool inKnockback;
 
     public static PlayerCharacter instance
     {
@@ -142,6 +156,14 @@ public class PlayerCharacter : MonoBehaviour
                     currentState = state.idle;
                 }
                 break;
+            case state.knockback:
+                currentKnockback -= Time.deltaTime;
+                if(currentKnockback <= 0)
+                {
+                    inKnockback = false;
+                    currentState = state.idle;
+                }
+                break;
         }
 
         allStates();
@@ -155,15 +177,23 @@ public class PlayerCharacter : MonoBehaviour
 
     void checkWeapon()
     {
+        attackDir = (motor.transform.up.normalized * hitBoxOffset) + motor.transform.position;
         if (currentWeapon)
         {
+            currentWeapon.transform.position = attackDir;
             currentAttackPersistence -= Time.deltaTime;
             if (currentAttackPersistence <= 0)
             {
+                if(currentDashEffect)
+                {
+                    Destroy(currentDashEffect);
+                    currentDashEffect = null;
+                }
                 anim.SetBool("IsAttacking", false);
                 Destroy(currentWeapon);
                 currentWeapon = null;
                 currentAttackPersistence = attackPersistence;
+
             }
         }
     }
@@ -197,8 +227,9 @@ public class PlayerCharacter : MonoBehaviour
         if(input.attack.IsPressed)
         {
             currentAttackCharge += Time.deltaTime;
-            if(currentAttackCharge >= attackChargeThresh)
+            if(currentAttackCharge >= attackChargeThresh && !canCharge)
             {
+                Instantiate(maxChargeEffect, transform.position, Quaternion.Euler(90,0,0));
                 canCharge = true;
             }
         }
@@ -206,20 +237,20 @@ public class PlayerCharacter : MonoBehaviour
         {
             if(canCharge)
             {
+                if(!currentDashEffect)
+                {
+                    currentDashEffect = Instantiate(dashEffect, transform.position, Quaternion.identity) as GameObject;
+                    currentDashEffect.transform.SetParent(transform);
+                }
                 rigid.AddForce(motor.transform.up * (maxAttackChargeForce * Mathf.Clamp(currentAttackCharge, 0, maxAttackCharge)));
                 canCharge = false;
             }
             currentAttackCharge = 0;
         }
-        Vector3 attackDir = (motor.transform.up.normalized * hitBoxOffset) + motor.transform.position;
 
         if (!currentWeapon)
         {
-            currentWeapon = Instantiate(weapon, attackDir, Quaternion.identity) as GameObject;
-        }
-        else
-        {
-            currentWeapon.transform.position = attackDir;
+            currentWeapon = Instantiate(weapon, attackDir, motor.transform.rotation) as GameObject;
         }
     }
 
@@ -281,17 +312,33 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    public void changeStatus(float damage, bool artifact)
+    public void changeStatus(float damage, bool artifact, GameObject source)
     {
-        health += damage;
-        if(health <= 0)
+        if (!inKnockback && damage < 0)
         {
-            currentState = state.death;
+            health += damage;
+            if (health <= 0)
+            {
+                currentState = state.death;
+            }
+            triggerKnockback(source.transform.position);
         }
         if(artifact)
         {
             artifactsCollected += 1;
         }
+    }
+
+    void triggerKnockback(Vector3 source)
+    {
+        currentState = state.knockback;
+        inKnockback = true;
+        rigid.velocity = Vector3.zero;
+        currentKnockback = knockbackLength;
+
+        Vector3 dir = transform.position - source;
+        dir.y = 0;
+        rigid.AddForce(dir.normalized * knockbackForce);
     }
 
 }
