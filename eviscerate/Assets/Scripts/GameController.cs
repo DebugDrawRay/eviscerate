@@ -8,6 +8,11 @@ public class GameController : MonoBehaviour
     [Header("Camera Control")]
     public Camera currentCamera;
 
+    public Transform currentCheckpoint;
+
+    public bool area1complete;
+    public bool area2complete;
+    public bool area3complete;
 
     void Awake()
     {

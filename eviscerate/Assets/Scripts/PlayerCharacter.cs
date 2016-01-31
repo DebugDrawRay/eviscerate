@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using InControl;
+using DG.Tweening;
+
 public class PlayerCharacter : MonoBehaviour
 {
     private PlayerActions input;
@@ -58,7 +60,21 @@ public class PlayerCharacter : MonoBehaviour
 
     [Header("Status")]
     public float health;
+    public float maxHealth
+    {
+        get;
+        private set;
+    }
     public int artifactsCollected = 0;
+
+    public float regenPeriod;
+    private float currentRegen;
+
+    private Tween currentTween;
+    public float hitStrength;
+    public int hitVibrado;
+    public float hitRandomness;
+    public float hitLength;
 
     [Header("Animation Loops")]
     private Animator anim;
@@ -87,6 +103,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         instance = this;
         originalMovementSpeed = movementSpeed;
+        maxHealth = health;
     }
     void Start()
     {
@@ -116,7 +133,14 @@ public class PlayerCharacter : MonoBehaviour
 	void Update ()
     {
         runStates();
-
+        if(currentRegen > 0)
+        {
+            currentRegen -= Time.deltaTime;
+        }
+        if(currentRegen <= 0)
+        {
+            health = maxHealth;
+        }
     }
 
     void runStates()
@@ -173,7 +197,7 @@ public class PlayerCharacter : MonoBehaviour
                 }
                 break;
             case state.falling:
-                Destroy(gameObject);
+                currentState = state.idle;
                 break;
         }
 
@@ -222,7 +246,7 @@ public class PlayerCharacter : MonoBehaviour
             }
             if (followingTarget)
             {
-                Vector3 moveDir = (motor.transform.right * input.move.X) + (motor.transform.up * input.move.Y);
+                Vector3 moveDir = (Vector3.right * input.move.X) + (Vector3.forward * input.move.Y);
                 rigid.velocity = moveDir * movementSpeed;
             }
             else
@@ -347,9 +371,11 @@ public class PlayerCharacter : MonoBehaviour
 
     public void changeStatus(float damage, bool artifact, GameObject source)
     {
-        if (!inKnockback && damage < 0)
+        if (!inKnockback && damage < 0 && source.tag == "Enemy")
         {
+            triggerCamShake();
             health += damage;
+            currentRegen = regenPeriod;
             if (health <= 0)
             {
                 currentState = state.death;
@@ -381,9 +407,21 @@ public class PlayerCharacter : MonoBehaviour
 
     public void triggerFall()
     {
+        transform.position = GameController.instance.currentCheckpoint.position;
+        health -= 1;
+        currentRegen = regenPeriod;
         if(!isCharging)
         {
             currentState = state.falling;
+        }
+    }
+
+    public void triggerCamShake()
+    {
+        if (currentTween == null || !currentTween.IsPlaying())
+        {
+            Vector3 str = new Vector3(hitStrength, 0, hitStrength);
+            currentTween = Camera.main.transform.DOShakePosition(hitLength, str, hitVibrado, hitRandomness);
         }
     }
 

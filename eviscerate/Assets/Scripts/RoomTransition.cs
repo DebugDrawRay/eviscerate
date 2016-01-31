@@ -3,21 +3,17 @@ using System.Collections;
 
 public class RoomTransition : MonoBehaviour
 {
-    public Camera newCamera;
+    public Transform destination;
+    public Transform newCheckpoint;
 
-    void Start()
-    {
-        if(GameController.instance.currentCamera != newCamera)
-        {
-            newCamera.enabled = false;
-        }
-    }
     void OnTriggerEnter(Collider hit)
     {
-        Debug.Log("Hit");
-        if(hit.gameObject.tag == "Player")
+        PlayerCharacter isPlayer = hit.GetComponent<PlayerCharacter>();
+        if (isPlayer)
         {
-            GameController.instance.changeCurrentCamera(newCamera);
+            PlayerCharacter.instance.transform.position = destination.position;
+            GameController.instance.currentCheckpoint = newCheckpoint;
+            Debug.Log("Moved");
         }
     }
 }

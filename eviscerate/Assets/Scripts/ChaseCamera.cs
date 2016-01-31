@@ -12,7 +12,7 @@ public class ChaseCamera : MonoBehaviour
         defaultFloat = transform.position.y;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 newPosition = Vector3.Lerp(transform.position, PlayerCharacter.instance.transform.position, lazyness);
         newPosition.y = defaultFloat;
