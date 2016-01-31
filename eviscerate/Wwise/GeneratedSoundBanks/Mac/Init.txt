@@ -1,0 +1,24 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Music			
+	2015843732	Intro_firstPlay	Music			
+	2234704088	Build_02	Music			
+	2234704089	Build_03	Music			
+	2234704091	Build_01	Music			
+	2234704094	Build_04	Music			
+	2234704095	Build_05	Music			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Master Audio Bus\HDR Master\Ambience	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\HDR Master\SFX	
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\HDR Master\SFX\Player	
+	1095497813	HDR Master			\Default Work Unit\Master Audio Bus\HDR Master	
+	1381315342	Events			\Default Work Unit\Master Audio Bus\HDR Master\SFX\Events	
+	2385628198	Footsteps			\Default Work Unit\Master Audio Bus\HDR Master\SFX\Footsteps	
+	3732162827	Dagger			\Default Work Unit\Master Audio Bus\HDR Master\SFX\Dagger	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\HDR Master\Music	
+

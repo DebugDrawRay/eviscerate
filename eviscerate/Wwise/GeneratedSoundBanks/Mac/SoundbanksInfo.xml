@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="10" SoundbankVersion="113">
+	<RootPaths>
+		<ProjectRoot>/Users/sorenlaulainen/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Repositories/eviscerate/eviscerate/Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/sorenlaulainen/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Repositories/eviscerate/eviscerate/Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/sorenlaulainen/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Repositories/eviscerate/eviscerate/Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/sorenlaulainen/Library/Application Support/Wwise/Bottles/wwise/dosdevices/y:/Repositories/eviscerate/eviscerate/Wwise/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ShortName>MAIN</ShortName>
+			<Path>MAIN.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3247576578" Name="Dagger_Attack"/>
+				<Event Id="3843002761" Name="Dagger_Hit"/>
+				<Event Id="1712046992" Name="Fire_Start"/>
+				<Event Id="643486511" Name="Footsteps_Start"/>
+				<Event Id="4187365685" Name="Footsteps_Stop"/>
+				<Event Id="2139053889" Name="Music_PlayBuild"/>
+				<Event Id="4053997147" Name="Music_PlayIntro"/>
+				<Event Id="3227181061" Name="Music_Stop"/>
+				<Event Id="2263603568" Name="Plant_Rip"/>
+				<Event Id="894013704" Name="Slidedown_Blood_Start"/>
+				<Event Id="734008916" Name="Slidedown_Blood_Stop"/>
+				<Event Id="3312934011" Name="Slidedown_Gravel_Start"/>
+				<Event Id="1843177945" Name="Slidedown_Gravel_Stop"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="4406611" Language="SFX">
+					<ShortName>Events\rip_plant_02.wav</ShortName>
+					<Path>SFX/Events/rip_plant_02_9E69E797.wem</Path>
+				</File>
+				<File Id="26647293" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_R2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_R2_404BBDCE.wem</Path>
+				</File>
+				<File Id="55061894" Language="SFX">
+					<ShortName>tamtam_02.wav</ShortName>
+					<Path>SFX/tamtam_02_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="69375323" Language="SFX">
+					<ShortName>intro_02.wav</ShortName>
+					<Path>SFX/intro_02_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="85376030" Language="SFX">
+					<ShortName>Events\ignite_fire.wav</ShortName>
+					<Path>SFX/Events/ignite_fire_9E69E797.wem</Path>
+				</File>
+				<File Id="86709244" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_R3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_R3_25FC5C14.wem</Path>
+				</File>
+				<File Id="117224947" Language="SFX">
+					<ShortName>Dagger\dagger_stab_02.wav</ShortName>
+					<Path>SFX/Dagger/dagger_stab_02_20738036.wem</Path>
+				</File>
+				<File Id="119617613" Language="SFX">
+					<ShortName>Dagger\dagger_stab_01.wav</ShortName>
+					<Path>SFX/Dagger/dagger_stab_01_20738036.wem</Path>
+				</File>
+				<File Id="146199511" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_L2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_L2_9E69E797.wem</Path>
+				</File>
+				<File Id="182131324" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_L3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_L3_9E69E797.wem</Path>
+				</File>
+				<File Id="203788980" Language="SFX">
+					<ShortName>Events\slidedown_gravel_loop.wav</ShortName>
+					<Path>SFX/Events/slidedown_gravel_loop_9E69E797.wem</Path>
+				</File>
+				<File Id="213841807" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_R1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_R1_1F793738.wem</Path>
+				</File>
+				<File Id="229060998" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_L1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_L1_38148AEF.wem</Path>
+				</File>
+				<File Id="236713607" Language="SFX">
+					<ShortName>gong_low_01.wav</ShortName>
+					<Path>SFX/gong_low_01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="246109637" Language="SFX">
+					<ShortName>Footsteps\FS_DeepWater_03.wav</ShortName>
+					<Path>SFX/Footsteps/FS_DeepWater_03_B149EB51.wem</Path>
+				</File>
+				<File Id="247446834" Language="SFX">
+					<ShortName>build_05_end.wav</ShortName>
+					<Path>SFX/build_05_end_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="273705268" Language="SFX">
+					<ShortName>Events\slidedown_gravel_end.wav</ShortName>
+					<Path>SFX/Events/slidedown_gravel_end_9E69E797.wem</Path>
+				</File>
+				<File Id="279693990" Language="SFX">
+					<ShortName>Footsteps\FS_DeepWater_04.wav</ShortName>
+					<Path>SFX/Footsteps/FS_DeepWater_04_7F95042A.wem</Path>
+				</File>
+				<File Id="303032102" Language="SFX">
+					<ShortName>build_03.wav</ShortName>
+					<Path>SFX/build_03_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="338208100" Language="SFX">
+					<ShortName>Footsteps\FS_Water_03.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Water_03_D0905E51.wem</Path>
+				</File>
+				<File Id="342171676" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_L1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_L1_E5DA76D5.wem</Path>
+				</File>
+				<File Id="385725531" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_L2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_L2_D4689E74.wem</Path>
+				</File>
+				<File Id="413547222" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_R1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_R1_9E69E797.wem</Path>
+				</File>
+				<File Id="439753744" Language="SFX">
+					<ShortName>Events\slidedown_blood.wav</ShortName>
+					<Path>SFX/Events/slidedown_blood_0743D997.wem</Path>
+				</File>
+				<File Id="441837345" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_L3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_L3_5F73BC3F.wem</Path>
+				</File>
+				<File Id="465196325" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_L1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_L1_9E69E797.wem</Path>
+				</File>
+				<File Id="525443534" Language="SFX">
+					<ShortName>intro_01.wav</ShortName>
+					<Path>SFX/intro_01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="539708011" Language="SFX">
+					<ShortName>Events\fire_loop.wav</ShortName>
+					<Path>SFX/Events/fire_loop_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="557985901" Language="SFX">
+					<ShortName>intro_buildonly.wav</ShortName>
+					<Path>SFX/intro_buildonly_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="574047594" Language="SFX">
+					<ShortName>Dagger\dagger_woosh_01.wav</ShortName>
+					<Path>SFX/Dagger/dagger_woosh_01_08514E98.wem</Path>
+				</File>
+				<File Id="584401563" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_R3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_R3_F79D18FC.wem</Path>
+				</File>
+				<File Id="600989073" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_R2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_R2_5043D145.wem</Path>
+				</File>
+				<File Id="608674816" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_R3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_R3_9E69E797.wem</Path>
+				</File>
+				<File Id="624607748" Language="SFX">
+					<ShortName>Footsteps\FS_Water_02.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Water_02_61C913DD.wem</Path>
+				</File>
+				<File Id="630328537" Language="SFX">
+					<ShortName>Footsteps\FS_Water_01.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Water_01_7BD5B6B1.wem</Path>
+				</File>
+				<File Id="681906917" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_R2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_R2_F1C82235.wem</Path>
+				</File>
+				<File Id="694401300" Language="SFX">
+					<ShortName>build_01.wav</ShortName>
+					<Path>SFX/build_01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="709974589" Language="SFX">
+					<ShortName>build_02.wav</ShortName>
+					<Path>SFX/build_02_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="721195721" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_R2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_R2_34B86542.wem</Path>
+				</File>
+				<File Id="726604133" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_L3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_L3_215797A0.wem</Path>
+				</File>
+				<File Id="731578001" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_L1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_L1_9E69E797.wem</Path>
+				</File>
+				<File Id="738053964" Language="SFX">
+					<ShortName>Footsteps\FS_Water_04.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Water_04_9E621E58.wem</Path>
+				</File>
+				<File Id="781589102" Language="SFX">
+					<ShortName>Footsteps\FS_DeepWater_01.wav</ShortName>
+					<Path>SFX/Footsteps/FS_DeepWater_01_07BCEA3F.wem</Path>
+				</File>
+				<File Id="798760820" Language="SFX">
+					<ShortName>cymbal_01.wav</ShortName>
+					<Path>SFX/cymbal_01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="806788357" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_L3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_L3_4CC9C00B.wem</Path>
+				</File>
+				<File Id="854846120" Language="SFX">
+					<ShortName>Events\slidedown_gravel_start.wav</ShortName>
+					<Path>SFX/Events/slidedown_gravel_start_9E69E797.wem</Path>
+				</File>
+				<File Id="894551532" Language="SFX">
+					<ShortName>Footsteps\FS_Stone_R1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Stone_R1_F8787B19.wem</Path>
+				</File>
+				<File Id="921922579" Language="SFX">
+					<ShortName>Footsteps\FS_Dirt_L2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Dirt_L2_9E69E797.wem</Path>
+				</File>
+				<File Id="942148246" Language="SFX">
+					<ShortName>Dagger\dagger_stab_03.wav</ShortName>
+					<Path>SFX/Dagger/dagger_stab_03_20738036.wem</Path>
+				</File>
+				<File Id="977222503" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_R1.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_R1_2C02CCC7.wem</Path>
+				</File>
+				<File Id="997123116" Language="SFX">
+					<ShortName>Footsteps\FS_Mud_R3.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Mud_R3_7EE6251D.wem</Path>
+				</File>
+				<File Id="1009420364" Language="SFX">
+					<ShortName>Events\rip_plant_01.wav</ShortName>
+					<Path>SFX/Events/rip_plant_01_9E69E797.wem</Path>
+				</File>
+				<File Id="1049586360" Language="SFX">
+					<ShortName>Footsteps\FS_DeepWater_02.wav</ShortName>
+					<Path>SFX/Footsteps/FS_DeepWater_02_AFFE0C69.wem</Path>
+				</File>
+				<File Id="1058539900" Language="SFX">
+					<ShortName>Footsteps\FS_Gravel_L2.wav</ShortName>
+					<Path>SFX/Footsteps/FS_Gravel_L2_9ABB282E.wem</Path>
+				</File>
+				<File Id="1068970196" Language="SFX">
+					<ShortName>tamtam_01.wav</ShortName>
+					<Path>SFX/tamtam_01_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="1069262557" Language="SFX">
+					<ShortName>build_04.wav</ShortName>
+					<Path>SFX/build_04_4B8CC0C5.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
