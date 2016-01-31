@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" SchemaVersion="70">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{6C7070A7-1697-438B-B2E0-9ADD621BB6F0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Environment Events" ID="{F77BAB62-AF11-4B6C-92FF-E9B455BF29C4}" ShortID="477396984">
+					<ChildrenList>
+						<Event Name="Plant_Rip" ID="{CBB8CC6B-3258-4D43-AC2E-E8AC3FF11CEF}">
+							<ChildrenList>
+								<Action Name="Play" ID="{CC72C3C0-B50A-444B-9B20-4DE58007190F}" ShortID="396263390" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{FAED275F-5C55-48A1-884A-9B292D04C864}" Global="false">
+											<ObjectRef Name="plantRip" ID="{8C45A96A-F8A6-4F5E-809D-2441E94585CE}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fire_Start" ID="{A8C05257-0F97-443C-A1CB-5F8532757948}">
+							<ChildrenList>
+								<Action Name="Play" ID="{48E1FBAD-1114-4B3B-8B15-C8DC72D1F061}" ShortID="736100681" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{9350C3D5-675C-4913-B052-CA9F58BC08C2}" Global="false">
+											<ObjectRef Name="fireIgnite" ID="{D21E4278-317F-4D16-ABE4-4A2BE97CDF99}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Play" ID="{8B03BEAF-AA9D-4D28-8003-93570457BDCB}" ShortID="198514835" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2781F6E1-459F-43B9-993B-3FEF4D7FAC69}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="0.2"/>
+															<Property Name="Min" Type="Real64" Value="-0.2"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="FadeCurve" Type="int16" Value="5"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{35FE3CEB-927E-46B3-9B6D-E5EB701D0F32}" Global="false">
+											<ObjectRef Name="fireLoop" ID="{344ED897-56A4-45C3-8C34-2DA1FDB48DB9}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Folder Name="Slidedowns" ID="{24BE92D9-1E1F-4030-83FD-84BA3751F4E8}" ShortID="1041266878">
+							<ChildrenList>
+								<Event Name="Slidedown_Gravel_Stop" ID="{BC2E6F5E-67D5-4FDF-982C-383031411F68}">
+									<ChildrenList>
+										<Action Name="Play" ID="{C646D58A-121F-47E2-B25E-0E8D867C7FFF}" ShortID="458291036" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{041B6A1C-3A85-4FC9-A29E-63331B214AD5}" Global="false">
+													<ObjectRef Name="slidedown_gravel_end" ID="{0EA1732A-2C2B-48A8-824A-2E84373BC1AC}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{9A07003D-EE34-4A85-8825-33B4F99B83DC}" ShortID="827275489" Type="Stop" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{C080ADEF-6B70-40F6-B7B0-228CF5F8809A}" Global="false">
+													<ObjectRef Name="slidedown_gravel_loop" ID="{CAE5F048-825D-490B-B721-3496E89C4E17}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Slidedown_Blood_Start" ID="{ACD38F8E-F7BD-4BC3-ABC0-CE03C2602553}">
+									<ChildrenList>
+										<Action Name="Play" ID="{CCB9CCEF-EDAB-4E4E-9200-01CACF74BA46}" ShortID="761550322" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeCurve" Type="int16" Value="7"/>
+												<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{CAF15C1D-05CB-497A-B4F5-0BCC22F82438}" Global="false">
+													<ObjectRef Name="slidedownBloodAndGravel" ID="{2859E4A8-500A-4F0F-9AFB-82D59FB1BA6E}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{54D26080-9508-43B2-BE02-95E439961054}" ShortID="347695678" Type="Stop" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{6C056A32-287B-4DA8-86C2-C34AECA5E64A}" Global="false">
+													<ObjectRef Name="FootstepsSwitch" ID="{935FCB9E-CC6C-4A84-9442-3D97AC63126F}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Slidedown_Blood_Stop" ID="{26EE145A-E7A6-4CE2-A7FB-9C02CF32DF26}">
+									<ChildrenList>
+										<Action Name="Stop" ID="{7D779333-136F-4C34-A3E2-5CBEAD88B24C}" ShortID="730543731" Type="Stop" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{FA89D74B-74CE-49CD-9C88-53367928090A}" Global="false">
+													<ObjectRef Name="slidedownBloodAndGravel" ID="{2859E4A8-500A-4F0F-9AFB-82D59FB1BA6E}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Slidedown_Gravel_Start" ID="{1B00AF34-2E30-45F7-948C-CFA1C3B665B2}">
+									<ChildrenList>
+										<Action Name="Play" ID="{3230BACD-2EED-4E05-9DD3-472C4EAABA25}" ShortID="254986703" Type="Play" Scope="One" Global="false">
+											<ElementList>
+												<Element ID="{21F0C8A4-2C56-4B7E-9434-C2875D0F9ED0}" Global="false">
+													<ObjectRef Name="slidedown_gravel_start" ID="{FC7EBB35-AC73-48CC-9A76-B43397251EE7}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Play" ID="{7F86C91F-EB91-40FC-9120-3C566D95A35A}" ShortID="801019916" Type="Play" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="Delay" Type="Real64" Value="0.2"/>
+												<Property Name="FadeCurve" Type="int16" Value="7"/>
+												<Property Name="FadeTime" Type="Real64" Value="1"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{8D452F81-2175-4FFE-9E32-905982366DBB}" Global="false">
+													<ObjectRef Name="slidedown_gravel_loop" ID="{CAE5F048-825D-490B-B721-3496E89C4E17}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+										<Action Name="Stop" ID="{29003589-3550-4DC2-A411-024032E9867D}" ShortID="20505301" Type="Stop" Scope="One" Global="false">
+											<PropertyList>
+												<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+											</PropertyList>
+											<ElementList>
+												<Element ID="{6BC3D7DA-EE32-4155-B034-1448E5275C60}" Global="false">
+													<ObjectRef Name="FootstepsSwitch" ID="{935FCB9E-CC6C-4A84-9442-3D97AC63126F}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+												</Element>
+											</ElementList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Combat" ID="{DDB0FE33-E546-44EB-A9C8-E07534DC70FB}" ShortID="567012306">
+					<ChildrenList>
+						<Event Name="Dagger_Attack" ID="{F261FCFF-61EE-434E-A11B-55346A1F2ED7}">
+							<ChildrenList>
+								<Action Name="Play" ID="{05787DC7-7A73-4534-B861-A75E59D3C123}" ShortID="998689271" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5780556D-0ABF-4B1C-B9E8-2593D979385A}" Global="false">
+											<ObjectRef Name="dagger_woosh_01" ID="{7146E8BF-D093-4441-8B9F-056CAB9D7EDE}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Dagger_Hit" ID="{64808905-73B0-40E7-9427-912B30B780A2}">
+							<ChildrenList>
+								<Action Name="Play" ID="{E0F5697A-90EF-479C-80B8-EDDE529FE77C}" ShortID="977604740" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{8C0177D4-9F67-4A20-BB9B-8978EA340B14}" Global="false">
+											<ObjectRef Name="daggerStab" ID="{89FB5444-9605-435A-AB61-73BEA3E9A684}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player" ID="{7B0B8133-E1E0-466D-B46C-5544F6A0B807}" ShortID="49426260">
+					<ChildrenList>
+						<Event Name="Footsteps_Start" ID="{604A7B89-FCC0-4257-9555-C15FB6493AB1}">
+							<ChildrenList>
+								<Action Name="Play" ID="{E2D1630E-2C17-4A58-B99A-61CBFE2F8F60}" ShortID="1027789549" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{B6B90819-3B85-4953-BF54-84372335DC2A}" Global="false">
+											<ObjectRef Name="FootstepsSwitch" ID="{935FCB9E-CC6C-4A84-9442-3D97AC63126F}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Footsteps_Stop" ID="{09239846-9BA0-4EAC-B1EF-339810397B24}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{81BC9D53-6B6F-4C8D-8987-3EB4CBA59945}" ShortID="684062482" Type="Stop" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{59934037-BBA4-4DCF-AD24-3D88117AEC8D}" Global="false">
+											<ObjectRef Name="FootstepsSwitch" ID="{935FCB9E-CC6C-4A84-9442-3D97AC63126F}" WorkUnitID="{CF933C36-4E0A-4102-8E81-270C8E28B840}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{FD39325F-0469-4245-B45F-ABF8294C6A04}" ShortID="1018958409">
+					<ChildrenList>
+						<Event Name="Music_PlayIntro" ID="{8DE79924-A67E-4ECF-892C-071EDC81CC90}">
+							<ChildrenList>
+								<Action Name="Play" ID="{88997D10-4A77-444A-8EF5-0020EA8D56E4}" ShortID="1053000189" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{82379E76-6351-4459-A005-BC7917AA77AD}" Global="false">
+											<ObjectRef Name="musicSystem" ID="{241F286B-B8CE-48C9-98F5-B9B3BCC583DF}" WorkUnitID="{D0B9EF79-B63A-4D26-93F3-4DC521CB2FDA}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Set State" ID="{1EFCF11C-0582-4C5D-A70E-F70DBE102C8A}" ShortID="393311048" Type="SetState" Scope="All" Global="true">
+									<SetItemParam>
+										<Group Name="Music" ID="{08F91276-A95D-43B7-9322-A5CDC674ADA1}"/>
+										<GroupItem Name="Intro_firstPlay" ID="{A1EE4372-C9E0-4E86-965D-947E5954CC25}"/>
+									</SetItemParam>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_Stop" ID="{38BF36A4-5D0E-4E2A-B255-28A0CF37EF8B}">
+							<ChildrenList>
+								<Action Name="Stop" ID="{AD344E07-D05A-4AC1-B8EA-529833EA00F3}" ShortID="359387164" Type="Stop" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{A8932652-444C-41AF-978E-E057447A2128}" Global="false">
+											<ObjectRef Name="musicSystem" ID="{241F286B-B8CE-48C9-98F5-B9B3BCC583DF}" WorkUnitID="{D0B9EF79-B63A-4D26-93F3-4DC521CB2FDA}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Music_PlayBuild" ID="{D45F648C-4E2F-41DC-B451-0EABC6FF489A}">
+							<ChildrenList>
+								<Action Name="Play" ID="{BA060AFA-467C-482B-9F7F-9EFCED38D3DC}" ShortID="97369184" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5C735A87-3441-4AEF-92D1-6F71AEFE682F}" Global="false">
+											<ObjectRef Name="musicSystem" ID="{241F286B-B8CE-48C9-98F5-B9B3BCC583DF}" WorkUnitID="{D0B9EF79-B63A-4D26-93F3-4DC521CB2FDA}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Set State" ID="{9D5E3F95-177E-4B63-A9F4-E0853BCB6D64}" ShortID="212641807" Type="SetState" Scope="All" Global="true">
+									<SetItemParam>
+										<Group Name="Music" ID="{08F91276-A95D-43B7-9322-A5CDC674ADA1}"/>
+										<GroupItem Name="Build_01" ID="{3BEB6166-1B88-4C41-87E5-0D08EA7135A3}"/>
+									</SetItemParam>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
