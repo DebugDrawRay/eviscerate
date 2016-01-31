@@ -13,7 +13,8 @@ public class PlayerCharacter : MonoBehaviour
         attack,
         death,
         stabbed,
-        knockback
+        knockback,
+        falling
     }
 
     public state currentState;
@@ -25,6 +26,8 @@ public class PlayerCharacter : MonoBehaviour
     [Header("Movement")]
     public GameObject motor;
     public float movementSpeed;
+    private float originalMovementSpeed;
+
     private Vector2 currentFacingDirection;
 
     private float facingDirection;
@@ -45,6 +48,7 @@ public class PlayerCharacter : MonoBehaviour
     private GameObject currentDashEffect;
 
     private bool canCharge;
+    private bool isCharging;
 
     private float currentAttackCharge;
     private float currentAttackPersistence;
@@ -60,7 +64,10 @@ public class PlayerCharacter : MonoBehaviour
     private Animator anim;
     public AnimationClip[] movementLoops;
 
-    //Targeting
+    [Header("Targeting")]
+    public GameObject targetingIndicator;
+    private GameObject currentIndicator;
+
     private int currentTargetIndex = 0;
     private bool followingTarget;
     private GameObject[] targets;
@@ -79,6 +86,7 @@ public class PlayerCharacter : MonoBehaviour
     void Awake()
     {
         instance = this;
+        originalMovementSpeed = movementSpeed;
     }
     void Start()
     {
@@ -164,6 +172,9 @@ public class PlayerCharacter : MonoBehaviour
                     currentState = state.idle;
                 }
                 break;
+            case state.falling:
+                Destroy(gameObject);
+                break;
         }
 
         allStates();
@@ -189,6 +200,7 @@ public class PlayerCharacter : MonoBehaviour
                     Destroy(currentDashEffect);
                     currentDashEffect = null;
                 }
+                isCharging = false;
                 anim.SetBool("IsAttacking", false);
                 Destroy(currentWeapon);
                 currentWeapon = null;
@@ -242,6 +254,7 @@ public class PlayerCharacter : MonoBehaviour
                     currentDashEffect = Instantiate(dashEffect, transform.position, Quaternion.identity) as GameObject;
                     currentDashEffect.transform.SetParent(transform);
                 }
+                isCharging = true;
                 rigid.AddForce(motor.transform.up * (maxAttackChargeForce * Mathf.Clamp(currentAttackCharge, 0, maxAttackCharge)));
                 canCharge = false;
             }
@@ -264,6 +277,11 @@ public class PlayerCharacter : MonoBehaviour
         else
         {
             followingTarget = false;
+            if(currentIndicator)
+            {
+                Destroy(currentIndicator);
+                currentIndicator = null;
+            }
         }
 
         if(input.target.WasPressed)
@@ -278,14 +296,29 @@ public class PlayerCharacter : MonoBehaviour
 
     void followTarget(int index)
     {
-        Vector3 targetPosition = targets[index].transform.position;
-        Vector3 origin = motor.transform.position;
-        Vector3 dir = targetPosition - origin;
-        updateFacing(dir.normalized.x, dir.normalized.z);
-        dir.y = 0;
-        Quaternion rot = Quaternion.LookRotation(dir);
-        rot = Quaternion.Euler(90, rot.eulerAngles.y, rot.eulerAngles.z);
-        motor.transform.rotation = rot;
+        if (targets[index].gameObject != null)
+        {
+            if (!currentIndicator)
+            {
+                currentIndicator = Instantiate(targetingIndicator, transform.position, Quaternion.Euler(90, 0, 0)) as GameObject;
+            }
+            Vector3 targetPosition = targets[index].transform.position;
+            Vector3 origin = motor.transform.position;
+            Vector3 dir = targetPosition - origin;
+            updateFacing(dir.normalized.x, dir.normalized.z);
+            dir.y = 0;
+            Quaternion rot = Quaternion.LookRotation(dir);
+            rot = Quaternion.Euler(90, rot.eulerAngles.y, rot.eulerAngles.z);
+            motor.transform.rotation = rot;
+            currentIndicator.transform.position = targetPosition + Vector3.up * 3;
+        }
+        else
+        {
+            Destroy(currentIndicator);
+            currentIndicator = null;
+            targets = GameObject.FindGameObjectsWithTag("Enemy");
+            currentTargetIndex = targets.Length;
+        }
     }
 
     void updateFacing(float x, float y)
@@ -329,6 +362,11 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
+    public void changeSpeed(float factor)
+    {
+        movementSpeed = originalMovementSpeed * factor;
+    }
+
     void triggerKnockback(Vector3 source)
     {
         currentState = state.knockback;
@@ -339,6 +377,14 @@ public class PlayerCharacter : MonoBehaviour
         Vector3 dir = transform.position - source;
         dir.y = 0;
         rigid.AddForce(dir.normalized * knockbackForce);
+    }
+
+    public void triggerFall()
+    {
+        if(!isCharging)
+        {
+            currentState = state.falling;
+        }
     }
 
 }
